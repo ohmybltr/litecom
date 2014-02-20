@@ -1,0 +1,45 @@
+/* vim: set ts=2 sw=2 sts=2 et: */
+
+/**
+ * Sticky panel common styles
+ *
+ * @author    Creative Development LLC <info@cdev.ru>
+ * @copyright Copyright (c) 2011-2012 Creative Development LLC <info@cdev.ru>. All rights reserved
+ * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ * @link      http://www.litecommerce.com/
+ */
+
+.sticky-panel {
+  position: relative;
+  margin: 0px;
+  margin-top: 20px;
+  padding: 0px;
+  overflow: visible;
+}
+
+.centered-box {
+  margin: 0px auto;
+  padding: 0px;
+  height: 100%;
+  overflow: visible;
+}
+
+.sticky-panel .box {
+  top: 0px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+  border: 1px solid #cadce8;
+  background: #fff none;
+  box-shadow: 1px 1px 5px silver;
+  -webkit-box-shadow: 1px 1px 5px silver;
+  -moz-box-shadow: 1px 1px 5px silver;
+  position: absolute;
+  margin: 0px;
+  padding: 20px 17px;
+  overflow: visible;
+}
+
+.sticky-panel .box button {
+  margin: 0px;
+}

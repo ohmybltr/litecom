@@ -1,0 +1,39 @@
+/* vim: set ts=2 sw=2 sts=2 et: */
+
+/**
+ * Pager base styles
+ *
+ * @author    Creative Development LLC <info@cdev.ru>
+ * @copyright Copyright (c) 2011-2012 Creative Development LLC <info@cdev.ru>. All rights reserved
+ * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ * @link      http://www.litecommerce.com/
+ */
+
+ul.pager,
+ul.pager li
+{
+  margin: 0;
+  padding: 0;
+}
+
+ul.pager li
+{
+  list-style: none;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+ul.pager a,
+ul.pager span
+{
+  width: 1em;
+}
+
+ul.pager li a,
+ul.pager li span
+{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}

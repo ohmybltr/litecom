@@ -1,0 +1,288 @@
+/* vim: set ts=2 sw=2 sts=2 et: */
+
+/**
+ * Modules modify page styles
+ *
+ * @author    Creative Development LLC <info@cdev.ru>
+ * @copyright Copyright (c) 2011-2012 Creative Development LLC <info@cdev.ru>. All rights reserved
+ * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ * @link      http://www.litecommerce.com/
+ */
+
+.modules-list .status
+{
+  white-space: nowrap;
+}
+
+.modules-list td.active {
+  text-align: center;
+}
+
+.modules-list td.enabled {
+  font-weight: bold;
+}
+
+.modules-list a {
+  text-decoration: underline;
+  color: #0055bd;
+}
+
+.modules-list.items-list {
+  border-top: solid 2px #e5e5e5;
+  width: 965px;
+}
+
+.modules-list tr td {
+  padding: 20px 0px 20px 20px;
+  border-bottom: solid 1px #e5e5e5;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  vertical-align: top;
+}
+
+.modules-list.data-table th,
+  .modules-list.data-table td
+{
+  padding: 20px 10px;
+}
+
+.modules-list tr td.icon {
+  width: 100px;
+}
+
+.modules-list tr td.module-main-section {
+  width: 25%;
+}
+
+.modules-list tr td.module-description-section {
+  width: 66%;
+  white-space: normal;
+}
+
+.modules-list tr.disabled td {
+  border-top: solid 1px #ffffff;
+}
+
+.modules-list tr.disabled td {
+  background-color: #f2f2f2;
+}
+
+.modules-list .name {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.modules-list .description {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.modules-list tr.disabled .name {
+  color: #8f8f8f;
+}
+
+.modules-list .version,
+.modules-list .note
+{
+  font-size: 12px;
+  color: #5c88a8;
+  margin-bottom: 15px;
+}
+
+.modules-list .author {
+  font-size: 14px;
+  color: #5c88a8;
+  margin-top: 10px;
+  float: left;
+  margin-right: 20px;
+}
+
+.modules-list .author span {
+  font-size: 14px;
+}
+
+.modules-list .actions {
+  margin-bottom: 10px;
+}
+
+.modules-list .actions li {
+  border-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-right-style: solid;
+  border-color: #d7e1e8;
+  background-color: #ebf4ff;
+  vertical-align: middle;
+  padding: 6px 5px 6px 9px;
+  margin: 0px;
+  float: left;
+  height: 16px;
+}
+
+.modules-list .actions li,
+.modules-list .actions label,
+.modules-list .actions a
+{
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.modules-list .actions label {
+  color: #5080a2;
+}
+
+.modules-list .actions li {
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.modules-list .actions li.first {
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-left-style: solid;
+  padding-left: 8px;
+}
+
+.modules-list .actions li.last {
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right: 3px;
+}
+
+.modules-list .actions li.last a.text {
+  margin-right: 3px;
+}
+
+.modules-list .disabled .actions li {
+  background-color: #f5f5f5;
+}
+
+.modules-list .actions li input {
+  margin-right: 3px;
+  margin-bottom: 2px;
+  margin-top: 1px;
+  display: inline-block;
+  position: absolute;
+  width: auto;
+  left: 0px;
+  top: 0px;
+}
+
+.modules-list .actions li label {
+  padding-bottom: 2px;
+  position: relative;
+  float: left;
+  padding-left: 20px;
+  line-height: 16px;
+}
+
+.modules-list .actions .uninstall img {
+  background: transparent url(../../images/icon_trash.png) no-repeat left top;
+  width: 22px;
+  height: 21px;
+}
+
+.modules-list tr.disabled .module-name {
+  color: #a3a3a3;
+  white-space: nowrap;
+}
+
+.modules-list .module-url {
+  margin-top: 10px;
+  font-size: 14px;
+  float: left;
+}
+
+.modules-list .icon-container {
+  position: relative;
+}
+
+.modules-buttons {
+  text-align: center;
+  width: 965px;
+}
+
+/* Notes */
+
+.modules-list .note,
+.modules-list .note div
+{
+  padding: 10px 20px;
+  width: 250px;
+  white-space: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.modules-list .note.dependencies,
+.modules-list .note.version.error,
+.modules-list .note div
+{
+  background-color: #f7eee4;
+  color: #7a2e1d;
+  border: solid 1px #d6bda5;
+}
+
+.modules-list .note div
+{
+  padding: 0;
+  border: none;
+}
+
+.modules-list .note.version.upgrade
+{
+  background-color: #e4f7e4;
+  color: #466444;
+  border: solid 1px #a8d6a5;
+}
+
+.icon-container .addon-disabled {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.icon-container .addon-disabled .disabled,
+  .icon-container .addon-disabled,
+  .icon-container .addon-icon .addon-icon
+{
+  width: 84px;
+  height: 84px;
+}
+
+.icon-container .addon-disabled .disabled {
+  background: transparent url(../../images/addon_disabled.png) left top no-repeat;
+}
+
+.icon-container .addon-icon .addon-default-icon {
+  background: transparent url(../../images/addon_default.png) left top no-repeat;
+}
+
+.icon-container .addon-icon.addon-disabled-note {
+  text-align: center;
+}
+
+.main-text {
+  margin: 35px 0px 0px 287px;
+}
+
+.main-text .no-modules-found {
+  font-size: 24px;
+  
+}
+
+.main-text .clarify-text {
+  margin: 9px 0px 0px 60px;
+  font-size: 16px;
+  color: #51799a;
+}
+

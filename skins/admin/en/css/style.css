@@ -1,0 +1,2053 @@
+/* vim: set ts=2 sw=2 sts=2 et: */
+
+/**
+ * ____file_title____
+ *
+ * @author    Creative Development LLC <info@cdev.ru>
+ * @copyright Copyright (c) 2011-2012 Creative Development LLC <info@cdev.ru>. All rights reserved
+ * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ * @link      http://www.litecommerce.com/
+ */
+
+
+/**
+ * Clear styles
+ */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, input, textarea
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+ol, ul
+{
+  list-style: none;
+}
+
+blockquote, q
+{
+  quotes:none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after
+{
+  content: '';
+  content: none;
+}
+
+:focus
+{
+  outline:0;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+
+/**
+ * Common styles
+ */
+
+body,
+p,
+div,
+th,
+td,
+p,
+input,
+span,
+textarea,
+button,
+.formError .formErrorContent
+{
+  color: #333;
+  font-size: 12px;
+  font-family: Helvetica, Arial, Sans-serif;
+}
+
+body
+{
+	background-color: #fff;
+}
+
+a
+{
+  color: #154e9c;
+}
+
+h1,
+h2,
+h3
+{
+  font-family: "Trebuchet MS", Helvetica, Sans-serif;
+  color: #69a4c9;
+  font-weight: normal;
+}
+
+h1
+{
+  font-size: 32px;
+  line-height: 36px;
+  margin: 10px 0 14px;
+}
+
+h2
+{
+  font-size: 24px;
+  margin: 18px 0;
+}
+
+h3
+{
+  font-size: 18px;
+  margin: 12px 0;
+}
+
+/**
+ * Form elements styles
+ */
+
+input[type=text],
+input[type=password],
+select,
+textarea
+{
+  border-top: solid 1px #808080;
+  border-left: solid 1px #808080;
+  border-right: solid 1px #dfdfdf;
+  border-bottom: solid 1px #dfdfdf;
+  padding: 3px;
+  background: #fff;
+}
+
+input[type=text],
+input[type=password]
+{
+  height: 16px;
+  line-height: 16px;
+}
+
+input[type=checkbox].readonly,
+  input[type=checkbox].readonly:hover
+{
+  opacity: 0.5;
+  background: transparent url(../images/checkbox-readonly.gif) left top no-repeat;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+select:focus,
+textarea:focus
+{
+  border: solid 1px #999;
+}
+
+select
+{
+  /* height: 24px;*/
+  line-height: 24px;
+}
+
+hr
+{
+  color: #ddd;
+  height: 1px;
+}
+
+input.input-file {
+  background: #ffffff;
+  border: solid 1px;
+  font-size: 14px;
+}
+
+/* Hide the dotted outline */
+input[type="submit"]::-moz-focus-inner,   /* FireFox */
+input[type="button"]::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+button::-moz-focus-inner
+{
+  border : 0px;
+}
+
+input[type="submit"]:focus,               /* IE8 */
+input[type="button"]:focus,
+input[type="reset"]:focus,
+button:focus
+{
+  outline : none;
+}
+
+/**
+ * Markup free clearing.
+ *
+ * @see http://perishablepress.com/press/2009/12/06/new-clearfix-hack
+ */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* IE6 */
+* html .clearfix {
+  height: 1%;
+}
+/* IE7 */
+*:first-child + html .clearfix {
+  min-height: 1%;
+}
+
+/**
+ * Layout
+ */
+
+html,
+body
+{
+  min-width: 640px;
+  height: 100%;
+}
+
+#footer
+{
+  overflow: hidden;
+}
+
+#page-container {
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+
+#header {
+  width: 100%;
+}
+
+#page-wrapper
+{
+  min-height: 95%;
+}
+
+/* safari and opera need this */
+#footer
+{
+  width:100%;
+}
+
+#content
+{
+  width: 100%;
+}
+
+#content-header
+{
+  margin-top: 0px;
+  padding-top: 10px;
+}
+
+#main
+{
+  margin: 15px 25px 25px 25px;
+  min-width: 950px;
+}
+
+#sub-section
+{
+  float:right
+}
+
+
+/**
+ * Header styles
+ */
+
+#header,
+  #menu
+{
+  background: #0C263D url(../images/admin_header_bg.png) repeat-x left top;
+  height: 76px;
+}
+
+#header .logo
+{
+  background: url(../images/logo.png) no-repeat 0 0;
+  width: 180px;
+  height: 76px;
+  float: left;
+}
+
+#header .sw-version
+{
+  position: absolute;
+  left: 90px;
+  top: 12px;
+}
+
+.sw-version .current
+{
+  color: #8f8f8f;
+  float: left;
+  font-size: 12px;
+}
+
+ul.version-note {
+  list-style: none;
+}
+
+ul.version-note li {
+  float: left;
+  margin-right: 10px;
+}
+
+ul.version-note li.current {
+  color: #8797a7;
+}
+
+li.updates-note {
+  background: url(../images/bulb.png) no-repeat 0 0;
+  display: block;
+  height: 20px;
+  padding: 0 0 0 20px;
+}
+
+li.upgrade-note a,
+  li.updates-note a
+{
+  text-decoration: underline;
+}
+
+li.upgrade-note a {
+  color: #6BA5D4;
+}
+
+li.upgrade-note a:hover {
+  color: #FFFFFF;
+}
+
+li.updates-note a {
+  color: #FFFFFF;
+}
+
+/**
+ * Footer styles
+ */
+
+#footer
+{
+  position: relative;
+  margin-top: -70px;
+  height: 70px;
+  clear: both;
+}
+
+#footer
+{
+  padding-top: 10px;
+  border-top: solid 1px #e6e6e6;
+}
+
+#footer .left
+{
+  float: left;
+  width: 70%;
+  text-align: left;
+}
+
+#footer .right
+{
+  float: right;
+  width: 30%;
+  text-align: right;
+}
+
+/**
+ * Common styles
+ */
+
+#content
+{
+  background: url(../images/content_top_bg.gif) repeat-x top left;
+  padding: 0px 0px 60px 0px;
+}
+
+.noscript
+{
+  width: 500px;
+  color: #f00;
+  font-weight: bold;
+}
+
+.admin-head,
+.admin-title
+{
+  color: #69a4c9;
+  font-family: "Trebuchet MS",Helvetica,Arial;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.admin-title
+{
+  color: #0D2335;
+}
+
+.main-menu-item-header
+{
+  color: #294F6C;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.highlight
+{
+  background-color: #eee;
+}
+
+.fixed-select
+{
+  width: 170px;
+}
+
+input.input-disabled
+{
+  color: #8f8f8f;
+}
+
+.center
+{
+  text-align: center;
+}
+
+.middle
+{
+  vertical-align: middle;
+  height: 100%;
+}
+
+/* Page tabs */
+
+div.page-tabs
+{
+  height: 37px;
+  border-bottom: 1px solid #cadce8;
+  background: #f5f5f5;
+  padding-top: 10px;
+}
+
+div.tab-content
+{
+  margin: 30px 0px 15px 0px;
+}
+
+div.page-tabs ul
+{
+  padding:0;
+  margin:0;
+  list-style:none;
+  margin-left: 10px;
+}
+
+div.page-tabs ul li
+{
+  float:left;
+}
+
+div.page-tabs ul li a
+{
+  -moz-border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
+  background: none repeat scroll 0 0 #ebf7ff;
+  border-color: #cadce8 #cadce8;
+  border-style: solid solid none;
+  border-width: 1px 1px 0;
+  display: block;
+  float: left;
+  margin-right: 10px;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+div.page-tabs ul li.tab-current a
+{
+  background: #fff;
+  color: #333;
+  border-bottom: 1px solid #fff;
+}
+
+/* Tabs: Second level */
+
+.tabs2-tabbed-content-wrapper {
+  margin-top: -30px;
+}
+
+div.tabs2-page-tabs
+{
+  height: 50px;
+  border-bottom: 1px solid #cadce8;
+  background: url(../images/tabs2_panel_bg.png) repeat-x scroll 0 4px;
+}
+
+div.tabs2-page-tabs ul
+{
+  padding:0;
+  margin:0;
+  list-style:none;
+  margin-left: 10px;
+}
+
+div.tabs2-page-tabs ul li
+{
+  float:left;
+}
+
+div.tabs2-page-tabs ul li
+{
+  display: block;
+  float: left;
+  margin-right: 10px;
+  padding: 18px 15px;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+div.tabs2-page-tabs ul li .footer
+{
+  background: url(../images/tabs2_arrow_up.png) no-repeat scroll 50% 10px;
+  height: 17px;
+  width: 100%;
+}
+
+div.tabs2-page-tabs ul li div
+{
+  text-decoration: none;
+  font-size: 14px;
+}
+
+div.tabs2-page-tabs ul li a {
+  text-decoration: underline;
+}
+
+div.tabs2-page-tabs ul li.tab-current
+{
+}
+
+div.list-after-tabs
+{
+  float: right;
+  display: inline;
+  height: 37px;
+}
+
+/* Data table */
+
+table.data-table th,
+table.data-table td
+{
+  padding: 5px 10px;
+  white-space: nowrap;
+  color: #333;
+  vertical-align: top;
+}
+
+table.data-table th
+{
+  background-color: #e5ebef;
+  text-align: left;
+  padding: 10px;
+  vertical-align: top;
+}
+
+table.data-table th.center
+{
+  text-align: center;
+}
+
+table.data-table td a
+{
+  text-decoration: underline;
+}
+
+table.data-table td a.module-name
+{
+  text-decoration: none;
+  color: #333333;
+}
+
+table.data-table th,
+table.data-table th a,
+table.data-table th span
+{
+  font-size: 16px;
+  font-weight: normal;
+  color: #154e9c;
+}
+
+table.data-table th a {
+  text-decoration: none;
+}
+
+table.data-table th a:hover {
+  text-decoration: underline;
+}
+
+table.data-table tr.highlight td
+{
+  background-color: #f2f2f2;
+}
+
+table.data-table tr.totals td
+{
+  font-weight: bold;
+}
+
+table.data-table td.separator
+{
+  border-top: solid 1px #E5EBEF;
+  padding: 0;
+}
+
+table.data-table .extender
+{
+  width: 100%;
+}
+
+table.data-table td.extender input
+{
+  width: 90%;
+}
+
+table.data-table td.center
+{
+  text-align: center;
+}
+
+.dialog-box
+{
+  background-color: #fff;
+}
+
+body.popup
+{
+  margin: 5px;
+  background: #fff;
+}
+
+.star
+{
+  color: #ff0000;
+}
+
+div.clear
+{
+  clear: both;
+  height: 0px;
+}
+
+/* Messages */
+
+.error-message
+{
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.validate-error-message
+{
+  color: #ff0000;
+}
+
+.success-message
+{
+  color: green;
+  font-weight: bold;
+}
+
+/* Validation subsystem styles */
+input.validation-error,
+textarea.validation-error,
+select.validation-error
+{
+  border-color: #ff0000;
+}
+
+.inline-error {
+  line-height: normal;
+  font-size: 12px;
+}
+
+/* Plain table */
+
+table.plain-table
+{
+  background-color: #000;
+}
+
+table.plain-table th
+{
+  background-color: #e5ebef;
+}
+
+table.plain-table td
+{
+  background-color: #fff;
+}
+
+.right-panel
+{
+  text-align: right;
+  padding: 5px 0px 10px 0px;
+}
+
+input.orderby
+{
+  width: 4em;
+  text-align: right;
+}
+
+input.price,
+input.inventory
+{
+  width: 50px;
+  text-align: right;
+}
+
+/* List-based form */
+
+ul.form
+{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+ul.form li
+{
+  margin: 0px;
+  padding: 5px 0px;
+  list-style: none;
+}
+
+ul.form label
+{
+  display: block;
+  font-style: normal;
+  margin-right: 5px;
+}
+
+ul.form li.required label
+{
+  background: transparent url(../images/red_star.png) no-repeat right 5px;
+}
+
+ul.form li .note
+{
+  display: block;
+  font-size: 10px;
+}
+
+/**
+ * Table-based form
+ */
+table.form {
+}
+
+table.form td.star {
+  color: #47b2cf;
+  width: auto;
+  padding-left: 11px;
+  padding-right: 6px;
+  padding-bottom: 6px;
+  line-height: normal;
+}
+
+table.form td.label label {
+  font-size: 16px;
+  line-height: 22px;
+  color: #456583;
+}
+
+table.form input[type="text"],
+table.form input[type="password"],
+table.form input[type="text"]
+{
+  border-width: 1px;
+  font-size: 16px;
+  padding: 6px;
+}
+
+/* Settings pages */
+
+.settings .section {
+  float: none;
+}
+
+.settings ul.table {
+  width: 1160px;
+}
+
+.settings ul.table li
+{
+}
+
+.settings ul.table li.even
+{
+  background-color: #eee;
+}
+
+.settings ul.table li.separator
+{
+  background-color: transparent;
+}
+
+.module .settings ul.table .table-label
+{
+  width: 25%;
+}
+
+.settings ul.table .table-label {
+  padding: 7px 0 7px 10px;
+  color: #456583;
+  white-space: normal;
+}
+
+.settings .model-properties ul.table div.table-label label {
+  width: auto;
+}
+
+.settings ul.table li.separator h2
+{
+  margin: 30px 0 10px 0;
+}
+
+.module .settings ul.table .table-value {
+  width: 70%;
+}
+
+.settings ul.table .table-value {
+  padding: 7px 0px;
+}
+
+.settings ul.table li .input-field-wrapper {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.settings ul.table li .tooltip-main {
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.settings ul.table li .wheel-mark {
+  display: none;
+}
+
+.general-settings ul.table .table-label
+{
+  width: 40%;
+}
+
+.general-settings ul.table .table-value {
+  width: 50%;
+}
+
+/* Buttons */
+
+div.buttons
+{
+  margin-top: 10px;
+}
+
+hr.tiny
+{
+  height: 0px;
+  border: 0px none;
+  border-top: 1px solid #cdcdcd;
+}
+
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+button
+{
+    -moz-border-radius: 19px;
+    -webkit-border-radius: 19px;
+    border-radius: 19px;
+    background: url(../images/button.png) repeat-x center top #eff8fe;
+    border: 1px solid #cadce8;
+    color: #2c5fa6;
+    cursor: pointer;
+    margin: 7px 7px 7px 0;
+    padding: 3px 10px 4px;
+    height: 26px;
+}
+
+input[type="submit"],
+  input[type="button"],
+  input[type="reset"],
+  button,
+  button span
+{
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+button span {
+  color: #0e55a6;
+}
+
+button:hover
+{
+  border-color: #b1c9e0;
+}
+
+button.main-button,
+input.main-button
+{
+  padding: 6px 20px;
+  height: 36px;
+}
+
+button.main-button span,
+input.main-button
+{
+  font-size: 15px;
+  line-height: 19px;
+  font-family: "Trebuchet MS",Helvetica,Jamrul,sans-serif;
+}
+
+button.invert
+{
+  background: url(../images/button_bg_blue.png) repeat 0 0;
+  border-color: transparent;
+}
+
+button.invert span
+{
+  color: #fff;
+}
+
+button.invert:hover
+{
+  background-color: transparent;
+  background-image: url(../images/button_bg_blue_hover.png);
+}
+
+/* Big button */
+
+button.action,
+button.bright
+{
+  font-size: 14px;
+  padding: 7px 20px 5px;
+  height: 33px;
+  -moz-border-radius: 19px;
+  -webkit-border-radius: 19px;
+  border-radius: 19px;
+}
+
+button.action span {
+  font-size: 16px;
+}
+
+button.bright span {
+  font-size: 19px;
+  color: white;
+}
+
+button.action
+{
+  background-image: url(../images/button.png);
+}
+
+button.bright
+{
+  border-style: none;
+  padding: 5px 17px 5px;
+  height: 36px;
+  background-image: url(../images/button-bright.png);
+}
+
+button.bright:hover
+{
+  background-position: center -36px;
+}
+
+button.bright:active
+{
+  background-position: center -72px;
+}
+
+button.link {
+  border-style: none;
+  background: transparent none;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+button.link span {
+  color: #154e9c;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+button.link[disabled="disabled"],
+button.link.disabled
+{
+  background: transparent none;
+}
+
+button.link[disabled="disabled"] span,
+button.link.disabled span
+{
+  color: #8f8f8f;
+  text-decoration: none;
+  cursor: default;
+}
+
+
+
+
+/* FIXME
+button.switch-state {
+  background: transparent url(../images/tri_button.png) no-repeat left top;
+  padding: 0px;
+  padding-left: 11px;
+  border: 0px none;
+}
+
+button.switch-state div {
+  -moz-top-right-border-radius: 3px;
+  -moz-bottom-right-border-radius: 3px;
+  -webkit-top-right-border-radius: 3px;
+  -webkit-bottom-right-border-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background: url(../images/button.png) repeat-x center top #eff8fe;
+  border: 1px solid #cadce8;
+  height: 17px;
+  padding: 5px 12px 2px 7px;
+  border-left: none;
+}
+*/
+
+button.switch-state div img {
+  background: transparent url(../images/switch.png) no-repeat left top;
+  height: 16px;
+  width: 16px;
+  vertical-align: middle;
+}
+
+button.switch-state div img {
+  margin-right: 7px;
+  margin-top: -5px;
+}
+
+button.switch-state.disabled-state div img {
+  background-position: left -16px;
+}
+
+button.disabled {
+  background-color: #CCCCCC;
+  background-image: none;
+  border-color: #CCCCCC;
+  color: #FFFFFF;
+  cursor: default;
+}
+
+button.disabled span {
+  color: #FFFFFF;
+}
+
+/* Button for payment actions */
+
+.orders button.payment-action-button {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 12px;
+    height: 26px;
+    padding: 3px 10px 4px;
+}
+
+/* Fade */
+.right-fade {
+  background: transparent url(../images/right_fade.png) repeat-y right top;
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 20px;
+  height: 100%;
+}
+
+
+/**
+ * jQueryUI-based wait box
+ */
+.wait-box .box
+{
+  background: transparent url(../images/progress.gif) repeat-x left top;
+  width: 100%;
+  height: 11px;
+}
+
+.wait-box .ui-dialog-titlebar {
+  display: none;
+}
+
+* html button
+{
+  behavior: expression(
+    this.onmouseover = new Function("this.className += ' hover'"),
+    this.onmouseout = new Function("this.className = this.className.replace(' hover','')"),
+    this.style.behavior = null
+  );
+}
+
+.ui-corner-all {
+  -moz-border-radius: 12px;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+  padding-bottom: 0px;
+}
+
+.ui-dialog .ui-dialog-content {
+  padding-top: 10px;
+}
+
+/* Advertise block */
+
+.adv-block
+{
+  border: 7px solid #dee8ee;
+  margin-bottom: 30px;
+}
+
+.adv-block .internal
+{
+  border: 1px solid #8fa7b9;
+  padding: 0px 0px 15px 25px;
+  position: relative;
+}
+
+.adv-block a.close
+{
+  position: absolute;
+  display: block;
+  top: 5px;
+  right: 5px;
+  outline: 0;
+}
+
+.adv-block a.close,
+.adv-block a.close img
+{
+  background: transparent url(../images/remove.png) no-repeat left top;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: 13px;
+  height: 13px;
+}
+
+.adv-block a
+{
+  color: #043fa0;
+  text-decoration: underline;
+}
+
+.adv-block td
+{
+  padding: 0px;
+  text-align: left;
+  color: #1e1e1e;
+  vertical-align: top;
+}
+
+.adv-block td.qualiteam
+{
+  text-align: right;
+  padding-top: 22px;
+  padding-right: 25px;
+  padding-left: 60px;
+}
+
+.adv-block h2
+{
+  font-size: 34px;
+  color: #082032;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 22px;
+  padding-bottom: 18px;
+  font-weight: normal;
+}
+
+.adv-block span
+{
+  line-height: 19px;
+}
+
+.adv-block p,
+.adv-block p a
+{
+  font-size: 18px;
+}
+
+.adv-block p
+{
+  color: #3b3b3b;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 18px;
+}
+
+.adv-block h2.custom
+{
+  background: transparent url(../images/adv_icon_custom.png) no-repeat left 6px;
+  padding-left: 60px;
+}
+
+.adv-block h2.support
+{
+  background: transparent url(../images/adv_icon_support.png) no-repeat left 22px;
+  padding-left: 50px;
+}
+
+.adv-block h2.hosting
+{
+  background: transparent url(../images/adv_icon_hosting.png) no-repeat left 20px;
+  padding-left: 55px;
+}
+
+.table tr td
+{
+  font-size: 12px;
+}
+
+.table-label
+{
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.table-input {
+  line-height: 24px;
+  vertical-align: top;
+}
+
+.checkboxes {
+  width: 1px;
+}
+
+.table-input-checkbox input {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.table-input-checkbox ul * {
+  vertical-align: middle;
+}
+
+.profile-form .table-label
+{
+  width: 130px;
+}
+
+form.profile-form
+{
+  margin-top: 15px;
+}
+
+.users-delete-note {
+  margin: 20px 0px 0px 0px;
+}
+
+table.data-table th.table-id-column,
+table.data-table td.table-id-column
+{
+  width: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* Profile form */
+
+#referer,
+#added,
+#last-login,
+#language,
+#orders-count
+{
+  font-weight: normal;
+}
+
+.profile-form input[type="text"],
+.profile-form input[type="password"],
+.profile-form select
+{
+  width: 300px;
+}
+
+.model-form-buttons
+{
+  padding-top: 25px;
+}
+
+.profile-form .button
+{
+  padding-left: 240px;
+}
+
+/* Navigation path */
+
+.navigation-path,
+.navigation-path:link,
+.navigation-path:visited,
+.navigation-path:active,
+.navigation-path:hover
+{
+  color: #294f6c;
+  text-decoration: none;
+}
+
+.navigation-path:hover
+{
+  color: #082032;
+}
+
+
+/* CATEGORY data - TODO - move to separate widget CSS file*/
+
+.category-data {
+  width: 700px;
+  border-spacing: 0px;
+}
+
+.category-data td {
+  padding: 10px 10px 7px 10px;
+}
+
+.category-data td .hidden {
+  display: none;
+}
+
+.category-data td a:hover {
+  text-decoration: underline;
+}
+
+.category-description {
+  border: solid 1px #e5e5e5;
+}
+
+.category-position-text {
+  z-index: 1000;
+  color: #808080;
+  margin-left: -65px;
+}
+
+.category-position {
+  margin-right: 35px;
+}
+
+.category-position input {
+  z-index: 500;
+  width: 30px;
+  text-align: right;
+  padding-left: 35px;
+}
+
+/* Product modify form */
+
+td.name-attribute
+{
+  white-space: nowrap;
+  vertical-align: top;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+td.value-attribute
+{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+td div.table-value {
+  display: inline;
+  float: left;
+  width: auto;
+}
+
+.product-modify-form .name-attribute
+{
+  width: 120px;
+}
+
+td.star
+{
+  width: 10px;
+  text-align: center;
+}
+
+/**
+ * Order statistics
+ */
+table.order-statistics {
+  width: 80%;
+  margin: 0px 0px 30px 0px;
+}
+
+table.order-statistics th {
+  text-align: right;
+}
+
+table.order-statistics td {
+  text-align: right;
+  white-space: normal;
+}
+
+
+table.order-statistics th.title,
+table.order-statistics td.title {
+  text-align: left;
+}
+
+table.top-sellers {
+  width: 80%;
+}
+
+table.top-sellers th {
+  text-align: left;
+}
+
+table.top-sellers td {
+  white-space: normal;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+table.top-sellers th.title {
+  text-align: left;
+}
+
+/**
+ * Benchmark summary
+ */
+.summary-box {
+  border: 1px solid #e9e9e9;
+  background-color: #f7f7f7;
+  padding: 5px;
+}
+
+.summary-box-content {
+  background-color: #fff;
+  padding: 13px 16px;
+  padding-bottom: 17px;
+}
+
+.benchmark-summary {
+  width: 348px;
+  margin-bottom: 20px;
+}
+
+.summary-box-content p {
+  font-size: 15px;
+}
+
+.benchmark-summary .buttons {
+  margin-top: 7px;
+}
+
+.benchmark-summary .buttons button {
+  float: left;
+}
+
+.benchmark-summary .help {
+  float: right;
+  margin-top: 19px;
+  border-bottom: 1px dotted #154e9c;
+}
+
+.benchmark-summary .completed,
+.benchmark-summary .compare
+{
+  font-size: 17px;
+}
+
+.benchmark-summary .completed .score {
+  font-size: 22px;
+}
+
+.benchmark-summary .completed .score-high {
+  color: #9d2307;
+}
+
+.benchmark-summary .date {
+  font-size: 11px;
+  color: #8f8f8f;
+  padding-left: 3px;
+  padding-top: 2px;
+}
+
+.benchmark-summary .buttons-rerun {
+  margin-top: 4px;
+}
+
+.benchmark-summary .buttons-rerun .help {
+  margin-top: 14px;
+}
+
+.benchmark-summary hr {
+  border: 0px none;
+  color: transparent;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 3px;
+}
+
+.benchmark-summary .compare {
+  padding-top: 7px;
+}
+
+.benchmark-summary .mark {
+  color: #238cd6;
+  vertical-align: top;
+}
+
+.benchmark-summary td {
+  padding: 11px 0px;
+  vertical-align: middle;
+}
+
+.benchmark-summary td * {
+  vertical-align: middle;
+}
+
+.benchmark-summary td,
+.benchmark-summary td span
+{
+  font-size: 15px;
+}
+
+.benchmark-summary td a {
+  text-decoration: underline;
+}
+
+.benchmark-summary td.dash {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.benchmark-summary td .score {
+  color: #338d0f;
+}
+
+.benchmark-summary .note {
+  color: #456583;
+}
+
+.measure-help-textformError {
+  margin-top: -9px !important;
+}
+
+.measure-help-textformError .formErrorContent {
+  width: 450px;
+  white-space: pre;
+  line-height: 18px;
+}
+
+.measure-help-textformError .formErrorContent span {
+  line-height: 30px;
+}
+
+/* Upgrade core block TODO: move it to separated widget */
+
+.upgrade-popup-block .ui-dialog-title {
+  display: none;
+}
+
+.upgrade-popup-block .ui-dialog-titlebar {
+  padding: 0px;
+}
+
+.upgrade-core-frame {
+  background: url(../images/icon_upgrade_big.png) no-repeat 9px 0;
+  padding: 0 40px 0 110px;
+}
+
+.upgrade-core-frame .title {
+  font-size: 30px;
+  font-family: "Trebuchet MS",Helvetica,Sans-serif;
+  line-height: 36px;
+  color: #69A4C9;
+  margin-bottom: 10px;
+}
+
+.upgrade-core-frame .label {
+  color: #456583;
+  font-size: 16px;
+}
+
+.upgrade-core-frame select {
+  width: 60px;
+  font-size: 16px;
+}
+
+.upgrade-core-frame .action {
+  padding-left: 35%;
+  padding-top: 10px;
+}
+
+div.default-section {
+  float: left;
+}
+
+div.model-form-buttons {
+  clear: left;
+}
+
+.model-properties ul.table {
+  list-style: none;
+  min-width: 1024px;
+}
+
+.model-properties ul.table > li {
+  background-image: none;
+  clear: left;
+}
+
+div.table-label {
+  float: left;
+  padding-right: 35px;
+}
+
+.model-properties ul.table div.table-label label {
+  width: 80px;
+}
+
+.model-properties ul.table li.itemslist div.table-value {
+  width: 100%;
+}
+
+div.star {
+  width: 10px;
+  padding: 12px 0px 5px 0px;
+  display: inline-block;
+}
+
+.table-label,
+  .table-value
+{
+  line-height: 24px;
+  padding: 5px 0px;
+}
+
+.settings div.table-value {
+  float: right;
+}
+
+div.table-value {
+  display: inline-block;
+}
+
+div.table-value input[type="text"],
+div.table-value input[type="password"],
+div.table-value select
+{
+  width: 250px;
+}
+
+div.table-value input[type="checkbox"] {
+  margin: 0px;
+  vertical-align: middle;
+}
+
+div.table-value .checkbox-list {
+  max-height: 100px;
+  overflow: auto;
+  padding-right: 25px;
+}
+
+div.table-value .checkbox-list li {
+  padding: 0px;
+  padding-bottom: 5px;
+  white-space: nowrap;
+}
+
+div.table-value .checkbox-list label {
+  margin-left: 5px;
+}
+
+div.table-value .input-text-integer input,
+  div.table-value .input-text-float input,
+  div.table-value .input-text-price input,
+  div.table-value .input-text-symbol input
+{
+  text-align: right;
+  width: 80px;
+}
+
+div.table-label label {
+  display: block;
+}
+
+ul.summary-table,
+  ul.main-table,
+  ul.access-table
+{
+  margin: 8px 0px 5px 27px;
+}
+
+ul.summary-table li,
+  ul.main-table li,
+  ul.access-table li
+{
+  padding: 0px 0px 13px 0px;
+}
+
+table.payment-methods {
+  width: 600px;
+}
+
+table.settings-table td {
+  white-space: nowrap;
+}
+
+table.settings-table td * {
+  float: left;
+  vertical-align: middle;
+}
+
+table.settings-table td.note * {
+  float: none;
+  vertical-align: top;
+}
+
+table.settings-table td.note ol {
+  list-style: decimal inside;
+}
+
+table.settings-table td.note ul {
+  list-style: disc inside;
+}
+
+table.settings-table td input[type=checkbox] {
+  margin: 5px 0px 0px 0px;
+}
+
+.tooltip-main {
+  float: left;
+}
+
+div.table-value .tooltip-main {
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.tooltip-main .tooltip-caption {
+  cursor: help;
+}
+
+.tooltip-caption.help-icon {
+  margin: 0px 0px 0px 8px;
+  width: 23px;
+  height: 23px;
+  background: transparent url(../images/icon_help.png) no-repeat left top;
+}
+
+/**
+ * Payment methods
+ */
+table.payment-methods {
+  width: auto;
+}
+
+table.payment-methods th {
+  padding: 5px 18px;
+  vertical-align: middle;
+}
+
+table.payment-methods th.switch img {
+  background: transparent url(../images/switch.png) no-repeat left top;
+  height: 16px;
+  width: 16px;
+  vertical-align: middle;
+}
+
+table.payment-methods td {
+  padding: 8px 18px;
+}
+
+table.payment-methods td.switch {
+  text-align: center;
+}
+
+table.payment-methods td.switch input {
+  margin-top: 8px;
+}
+
+table.payment-methods td.pos input {
+  width: 28px;
+}
+
+table.payment-methods td.name input {
+  width: 297px;
+}
+
+table.payment-methods td.name div {
+  color: #8f8f8f;
+}
+
+table.payment-methods td.description textarea {
+  width: 322px;
+  height: 42px;
+}
+
+table.payment-methods td.description button {
+  vertical-align: bottom;
+}
+
+/**
+ * No taxes page
+ */
+.no-tax-modules {
+  border: 1px solid #eee;
+  padding: 0px;
+  margin: 0px 3px;
+  background: transparent none;
+  width: 690px;
+}
+.no-tax-modules div {
+  border: 6px solid #f9f9f9;
+  margin: 0px;
+  padding: 16px 21px;
+  font-size: 20px;
+  color: #69a4c9;
+}
+
+/**
+ * List-based form
+ */
+form.list-form {
+  display: inline-block;
+  width: auto;
+}
+
+.sticky-panel .panel-cell {
+  display: inline-block;
+  padding: 0px;
+}
+
+.sticky-panel .panel-cell > button {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.sticky-panel div.cancel,
+.sticky-panel div.additional
+{
+  display: block;
+}
+
+.sticky-panel a.cancel {
+  text-indent: -5000px;
+  display: block;
+  background: transparent url(../images/icon_cancel.png) no-repeat left top;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+}
+
+.sticky-panel a.cancel.disabled {
+  opacity: .5;
+  cursor: text;
+}
+
+.sticky-panel.has-add-buttons .box {
+  padding-right: 47px;
+}
+
+.sticky-panel.has-add-buttons .additional {
+  position: absolute;
+  top: 4px;
+  right: -26px;
+  width: 58px;
+  height: 68px;
+  background: transparent url(../images/button_more_arrow.png) no-repeat left top;
+  -moz-border-radius: 0px 5px 5px 0px;
+  -webkit-border-radius: 0px 5px 5px 0px;
+  border-radius: 0px 5px 5px 0px;
+  overflow: visible;
+}
+
+.sticky-panel.has-add-buttons .additional .additional-buttons {
+  position: absolute;
+  left: 43px;
+  display: none;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #cadce8;
+  background: #fff none;
+  padding: 15px;
+}
+
+.sticky-panel.has-add-buttons .additional:hover .additional-buttons {
+  display: block;
+}
+
+/* Common styles for Payment settings page */
+
+.payment-settings {
+  margin: 0px;
+  padding: 0px;
+}
+
+.dialog-content .payment-settings a:link {
+  text-decoration: underline;
+}
+
+.dialog-content .payment-settings .buttons {
+  margin-left: 150px;
+  padding-bottom: 10px;
+}
+
+.payment-settings h2 {
+}
+
+.payment-settings .middle {
+  min-width: 1000px;
+}
+
+.payment-settings .middle .settings {
+  display: inline-block;
+  width: 500px;
+  vertical-align: top;
+}
+
+.payment-settings .middle .help {
+  display: inline-block;
+  padding-right: 25px;
+  vertical-align: top;
+}
+
+.payment-settings .footer {
+  margin-top: 30px;
+  padding: 10px 40px;
+  width: 700px;
+  background-color: #F7F7F7;
+}
+
+.payment-settings .options {
+  padding-top: 3px;
+}
+
+.payment-settings .options li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.payment-settings .options li span {
+  width: 150px;
+  display: inline-block;
+}
+
+.payment-settings .options label
+{
+  color: #456583;
+  vertical-align: middle;
+  font-size: 16px;
+  padding-top: 3px;
+}
+
+.payment-settings .options input[type="text"]
+{
+  border-width: 1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 14px;
+  width: 160px;
+  vertical-align: middle;
+}
+
+.payment-settings .options .tooltip-main {
+  float: none;
+  display: inline;
+  padding-left: 2px;
+}
+
+.payment-settings .options .tooltip-main .tooltip-caption.help-icon {
+  vertical-align: middle;
+}
+
+.payment-settings .help {
+  width: 400px;
+  margin-left: 50px;
+  padding-top: 18px;
+}
+
+.payment-settings .help-title {
+  font-size: 16px;
+  color: black;
+  padding: 5px 0;
+}
+
+.payment-settings .help-text {
+  font-size: 12px;
+  color: black;
+  padding: 5px 0;
+}
+
+.payment-settings .help-link {
+  font-size: 16px;
+  color: #456583;
+  padding: 15px 0;
+}
+
+.payment-settings .footer .left-part {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.payment-settings .footer .right-part {
+  display: inline-block;
+  padding-right: 20px;
+  vertical-align: top;
+}
+
+.payment-settings .footer div {
+  padding: 5px 0;
+  font-size: 16px;
+}
+
+.payment-settings .footer li {
+  padding: 5px 0;
+}
+
+.payment-settings .footer ul {
+}
+

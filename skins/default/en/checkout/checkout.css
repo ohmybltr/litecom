@@ -1,0 +1,59 @@
+/* vim: set ts=2 sw=2 sts=2 et: */
+
+/**
+ * Checkout styles
+ *
+ * @author    Creative Development LLC <info@cdev.ru>
+ * @copyright Copyright (c) 2011-2012 Creative Development LLC <info@cdev.ru>. All rights reserved
+ * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ * @link      http://www.litecommerce.com/
+ */
+.checkout-totals .cart-sums
+{
+  list-style: none;
+}
+
+.order-success-box .reason
+{
+  font-size: 11px;
+  color: #EE0000;
+  padding-bottom: 25px;
+}
+
+.item-custom_state {
+  display: none;
+}
+
+.address-text-label,
+  .address-text-comma
+{
+  display: none;
+}
+
+ul.address-box > li {
+  padding: 0px 0px 2px 2px;
+  float: left;
+  clear: left;
+}
+
+ul.address-box li ul li {
+  float: left;
+  clear: none;
+}
+
+ul.address-box li.address-text-lastname,
+  ul.address-box li.address-text-firstname,
+  ul.address-box li.address-text-state_id,
+  ul.address-box li.address-text-zipcode
+{
+  clear: none;
+}
+
+ul.address-box li.address-text-city .address-text-comma,
+  ul.address-box li.address-text-state_id .address-text-comma,
+  ul.address-box li.address-text-country_code .address-text-comma,
+  ul.address-box li.address-text-phone .address-text-label
+{
+  display: inherit;
+}
+
